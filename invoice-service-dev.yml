@@ -3,7 +3,7 @@ spring:
     name: invoice-service
   data:
     mongodb:
-      database: invoicedb-t2
+      database: invoicedb
       uri: mongodb://localhost:27017
   kafka:
     consumer:
