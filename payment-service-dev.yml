@@ -1,6 +1,11 @@
 spring:
   application:
     name: payment-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
   datasource:
     username: postgres
     password: sakarya5454
@@ -27,6 +32,17 @@ eureka:
     prefer-ip-address: true
 server:
   port: 0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
 
 resilience4j:
   retry:
