@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:8080/realms/rent-a-car-microservice/protocol/openid-connect/certs
   data:
     mongodb:
       database: filterdb
