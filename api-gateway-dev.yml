@@ -18,3 +18,15 @@ eureka:
     prefer-ip-address: true
 server:
   port: 9010
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://192.168.1.101:9411/api/v2/spans
