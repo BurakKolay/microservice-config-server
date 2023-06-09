@@ -1,6 +1,11 @@
 spring:
   application:
     name: filter-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://192.168.1.101:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
   data:
     mongodb:
       database: filterdb
@@ -27,3 +32,15 @@ eureka:
     prefer-ip-address: true
 server:
   port: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://192.168.1.101:9411/api/v2/spans
