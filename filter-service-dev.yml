@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://192.168.1.101:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:8080/realms/RentACarMicroservice/protocol/openid-connect/certs
   data:
     mongodb:
       database: filterdb
@@ -43,4 +43,4 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://192.168.1.101:9411/api/v2/spans
+      endpoint: http://localhost:9411/api/v2/spans
